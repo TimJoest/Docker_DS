@@ -1,0 +1,18 @@
+services:
+  python:
+    build: .
+    container_name: MontyPython
+    working_dir: /Semester1/Python
+    command: sleep infinity
+    volumes: 
+      - .:/Semester1
+    depends_on:
+      - cpp
+
+  cpp:
+    image: gcc:latest
+    container_name: Informatik
+    working_dir: /Semester1
+    command: sleep infinity
+    volumes: 
+      - .:/Semester1
